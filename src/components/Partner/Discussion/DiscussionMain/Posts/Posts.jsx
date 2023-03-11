@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import dummyAvatar1 from './../../../../../assets/images/avatars/avatar-1.png'
-
+import $ from 'jquery'
 
 const Posts = ({id, index, posterImg, poster, postType, postTime, postBody, attachments, likes, comments }) => {
     const [liked, setLiked] = useState(false)
@@ -28,6 +28,10 @@ const Posts = ({id, index, posterImg, poster, postType, postTime, postBody, atta
         }
     }, [images])
     
+    const handleSkeleton = () => {
+        $(this).removeClass('skeleton')
+      }
+      
     
 
   return (
@@ -51,7 +55,7 @@ const Posts = ({id, index, posterImg, poster, postType, postTime, postBody, atta
 
         <div className='grid grid-cols-2 gap-2 grid-rows-2 sm:h-80'>
             {images.map((image, idx) => {
-              return  <img key={idx} src={image.img} alt="post" className={`rounded-ten w-full h-full ${gridStyle} object-cover skeleton`} />
+              return  <img key={idx} src={image.img} alt="post" onLoad={handleSkeleton} className={`rounded-ten w-full h-full ${gridStyle} object-cover skeleton`} />
             })}
         </div>
 

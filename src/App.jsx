@@ -12,6 +12,7 @@ import PartnerInventory from './components/Partner/PartnerInventory/PartnerInven
 import PartnerHome from './components/Partner/PartnerHome/PartnerHome'
 import Impact from './components/Partner/Impact/Impact'
 import Discussion from './components/Partner/Discussion/Discussion'
+import Profile from './components/Partner/Profile/Profile'
 
 function App() {
   const campaignState = useCampaignStore(state => state.currentCampaignState)
@@ -33,6 +34,7 @@ function App() {
                   <Route index path='/campaigns' element={<Campaign />} />
                   <Route index path='/inventory' element={<PartnerInventory />} />
                   <Route index path='/impact' element={<Impact />} />
+                  <Route index path='/profile' element={<Profile />} />
                 </>
             }
 

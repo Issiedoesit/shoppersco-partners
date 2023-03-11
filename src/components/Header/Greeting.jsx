@@ -1,6 +1,4 @@
-import React, {useState} from 'react'
-import ButtonIcon from './../Buttons/ButtonIcon'
-import ButtonNoIcon from './../Buttons/ButtonNoIcon'
+import React from 'react'
 
 
 const Greeting = ({useBtns, headBtns, salutation, salutationFontBigger}) => {

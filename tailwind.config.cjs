@@ -139,6 +139,9 @@ module.exports = {
         fiveHundred: "31.25rem",
         fiftyPercent: "50%"
       },
+      dropShadow: {
+        '1x': '0 0 50px rgba(0, 0, 0, 0.5)',
+      },
       borderWidth: {
         '0.5': '0.5px',
         '10': '10px',
@@ -159,6 +162,7 @@ module.exports = {
         '14px': '0.875rem',
         '18px': '1.125rem',
         '30px': '1.875rem',
+        '38px': '2.375rem',
         '40px': '2.5rem',
         '45px': '2.8125rem',
         '50px': '3.125rem',

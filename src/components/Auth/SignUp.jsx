@@ -26,7 +26,7 @@ const SignUp = () => {
 
   return (
     <div className='col-span-12 flex py-20 md:py-0 md:grid grid-cols-12 min-h-screen'>
-        <AuthForm authHeaderText={'Create your free account'} authPageType={authPageType} />
+        <AuthForm authHeaderText={'Create your ShoppersBag account'} authPageType={authPageType} />
         <section ref={containerRef} className="absolute md:relative top-0 left-0 login--img--sect col-span-4 lg:col-span-7 xl:col-span-8 h-full">
             <img src="src/assets/images/pngs/signUpImg.png" alt="hand with oranges" onLoad={handleSkeleton} className='object-cover skeleton min-h-screen h-full' />
             <div className='absolute top-0 left-0 w-full h-full bg-white/20'></div>

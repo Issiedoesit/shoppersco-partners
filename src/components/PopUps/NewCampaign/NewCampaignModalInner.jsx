@@ -10,7 +10,7 @@ const NewCampaignModalInner = () => {
   return (
     <div className='bg-white m-auto rounded-ten z-50 w-ninetyFivePercent sm:w-sixtyFivePercent md:w-sixtyPercent lg:w-fiftyPercent h-fit'>
         <div className='bg-brandGreen4x rounded-t-ten py-2.5 px-5 sm:px-10 md:px-14 w-full'>
-            <h2 className='text-white font-avenirBlack text-2xl md:text-3xl'>New Order</h2>
+            <h2 className='text-white font-avenirBlack text-2xl md:text-3xl'>New Campaign</h2>
         </div>
 
         <form className='px-5 sm:px-10 md:px-14 py-10 space-y-6'>

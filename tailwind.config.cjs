@@ -43,6 +43,7 @@ module.exports = {
         brandYellow3x: '#F6DB491A',
         brandYellow4x: '#FFBD0033',
         brandYellow5x: '#E2B100',
+        brandYellow6x: '#F0C52A',
         brandGray1x: '#898080',
         brandGray2x: '#6D7578',
         brandGray3x: '#F9FBFA',

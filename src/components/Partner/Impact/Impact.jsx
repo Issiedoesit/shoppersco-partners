@@ -38,8 +38,16 @@ const Impact = () => {
 
         <div className='flex flex-col-reverse lg:grid grid-cols-6 gap-5 rounded-ten'>
           <div className="col-span-4 bg-white px-5 py-10 md:p-10 rounded-ten">
-            <div>
-              <h2 className='pb-10 text-black font-avenirBlack text-xl'>{chartTitle}</h2>
+            <div className='flex justify-between gap-10 flex-col md:flex-row items-start pb-10 '>
+              <h2 className='text-black font-avenirBlack text-xl'>{chartTitle}</h2>
+              <div className='self-end'>
+                <label htmlFor="filter" className='flex gap-3 items-center self-end'>
+                  <span className='text-xs font-avenirHeavy'>Filter by month</span>
+                  <select name="filter" id="filter" className='rounded-fifty pr-2 sm:pr-5 lg:pr-10 focus:ring-inset focus:ring-2 focus:ring-offset-2 focus:ring-brandGreen4x focus:outline-none bg-brandWhite1x text-xs sm:text-sm text-brandGray34x py-2 md:py-2.5 h-11 border-0.5 pl-2 border-brandGray34x'>
+                      <option value="6 months" selected>6 month ago</option>
+                  </select>
+                </label>
+              </div>
             </div>
             {chart == 'prm' && <ChartImpact />}
           </div>

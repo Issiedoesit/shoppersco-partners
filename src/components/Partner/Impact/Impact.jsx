@@ -1,39 +1,58 @@
 import React, { useState, useMemo } from 'react'
 import ImpactMetricsData from '../../../data/Impact/ImpactMetricData'
-import NumbersCards from '../../Cards/NumbersCards'
+import StatsCard from '../../Cards/StatsCard'
 import Greeting from '../../Header/Greeting'
 import {useDocTitle} from './../../../customHooks/DocumentTitle'
 import { useSearchTables } from '../../../customHooks/SearchTables'
 import TemplatePage from '../../Template'
+import ChartImpact from './ChartImpact/ChartImpact'
 
 
 const Impact = () => {
   useDocTitle('ShoppersBag | Impact')
   const [ handleSearch, handleBlur ] = useSearchTables('', 'impact-cards')
+  const [chart, setChart] = useState('prm')
+  const [chartTitle, setChartTitle] = useState('Number of PRM achieved')
 
+  const stats = [
+    {
+      title:'Number of PRM achieved',
+      stat:'21,345,134',
+      id:"prm"
+    },
+    {
+      title:'Number of bags in circulation',
+      stat:'120,345,134',
+      id:"bags"
+    },
+    {
+      title:'Total number of campaigns carried out by partner',
+      stat:'320,345,134',
+      id:"campaigns"
+    },
+  ]
 
   return (
     <TemplatePage headerTitle={'Impact'}>
-        <Greeting headBtns={false} salutation={'Welcome to Shoppersbag\'s Impact'} salutationFontBigger={true} />
+        {/* <Greeting headBtns={false} salutation={'Welcome to Shoppersbag\'s Impact'} salutationFontBigger={true} /> */}
 
-        <div>
-          <label htmlFor="searchImpacts" className='flex items-center gap-7 py-3 px-18px border-0.5 border-brandGray37x bg-brandGray38x rounded-fifty'>
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.4584 22.7501C18.1423 22.7501 22.75 18.1423 22.75 12.4584C22.75 6.77448 18.1423 2.16675 12.4584 2.16675C6.77442 2.16675 2.16669 6.77448 2.16669 12.4584C2.16669 18.1423 6.77442 22.7501 12.4584 22.7501Z" stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path opacity="0.4" d="M23.8334 23.8334L21.6667 21.6667" stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <input onChange={handleSearch} type="search" name="search-Impacts" id="searchImpacts" placeholder='Search Impacts by keyword' className="w-full bg-transparent focus:outline-none focus:ring-none text-sm font-avenirLight text-brandGray39x"/>
-          </label>
+        <div className='flex flex-col-reverse lg:grid grid-cols-6 gap-5 rounded-ten'>
+          <div className="col-span-4 bg-white px-5 py-10 md:p-10 rounded-ten">
+            <div>
+              <h2 className='pb-10 text-black font-avenirBlack text-xl'>{chartTitle}</h2>
+            </div>
+            {chart == 'prm' && <ChartImpact />}
+          </div>
+
+          <div className="col-span-2 flex flex-col gap-5">
+            {stats.map((stat, idx)=>{
+              return <button key={idx} className="rounded-ten focus:outline-none" onClick={()=>{setChart(stat.id); setChartTitle(stat.title)}}>
+                <StatsCard key={idx} header={stat.title} stat={stat.stat} paddingY={'py-5 text-left'} bgColor={`${chart == stat.id ? 'border-0.5 border-brandGreen4x bg-brandLightGreen2x' : 'bg-white hover:bg-white/80 border-0.5 border-white hover:border-brandGreen4x/20'} transition-all ease-in-out duration-200`}  />
+              </button>
+            })}
+          </div>
         </div>
 
-
-        <div className='grid xs:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 pb-5 gap-2 auto-cols-fr gap-y-5 2xl:gap-5 pt-10 auto-rows-fr'>
-              
-            {ImpactMetricsData.map((item, index)=>{
-              return <NumbersCards keyprop={`${index+1}`} id={`impact${index+1}`} header={item.header} metric={item.metric} amount={item.amount} trend={item.trend} percent={item.percent} extraClasses={'impact-cards'} />
-            }) }
-
-        </div>
     </TemplatePage>
   )
 }

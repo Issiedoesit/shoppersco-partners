@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import DummyCampaigns from '../../../../data/DummyCampaigns'
 import ButtonNoIcon from '../../../Buttons/ButtonNoIcon'
 import TemplatePage from '../../../Template'
+import EditCampaignModal from './Modals/EditCampaignModal'
 import InteractionModal from './Modals/InteractionModal'
 import ParticipantsModal from './Modals/ParticipantsModal'
 import WinnerModal from './Modals/WinnerModal'
@@ -20,6 +21,7 @@ const CampaignDetails = () => {
     const [isParticipantsModalOpen, setIsParticipantsModalOpen] = useState(false)
     const [isWinnerModalOpen, setIsWinnerModalOpen] = useState(false)
     const [isInteractionModalOpen, setIsInteractionModalOpen] = useState(false)
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false)
     const [currentInteraction, setCurrentInteraction] = useState('comments')
 
     const handleInteractionModalOpen = (interaction) => {
@@ -47,7 +49,7 @@ const CampaignDetails = () => {
                                         <h2 className='text-2xl font-avenirBlack pb-1'>{campaign.title}</h2>
                                         <p className='text-sm'>Time Posted: <span>{campaign.date}</span></p>
                                     </div>
-                                    <button type='button' className='self-end'>
+                                    <button type='button' className='self-end' onClick={()=>setIsEditModalOpen(true)}>
                                         <span className='text-right font-avenirMedium  underline underline-offset-2 text-brandBlue1x whitespace-nowrap'>Edit Campaign</span>
                                     </button>
                                 </div>
@@ -63,7 +65,7 @@ const CampaignDetails = () => {
                                 </div>
 
                                 <div className="py-5 border-y-0.5 border-y-brandGray51x flex flex-col md:flex-row justify-between gap-8 md:gap-10">
-                                    <div className="flex justify-between gap-8 md:gap-10">
+                                    <div className="flex md:justify-between gap-3 md:gap-10 md:w-sixtyPercent">
                                         <button type='button' onClick={()=>handleInteractionModalOpen('likes')} className='flex items-center gap-3'>
                                             <div className='w-7 trans-all-500-ease-in-out hover:drop-shadow-md hover:bg-brandBlueGray1x active:translate-y-2 aspect-square rounded-fiftyPercent bg-brandBlueGray1x/70 flex items-center justify-center'>
                                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,9 +114,10 @@ const CampaignDetails = () => {
             }
         </div>
 
-        <ParticipantsModal data={currentCampaign.length !== 0 && currentCampaign[0]} isModalOpen={isParticipantsModalOpen} closeModal={()=>setIsParticipantsModalOpen(false)} />
-        <WinnerModal data={currentCampaign.length !== 0 && currentCampaign[0]} isModalOpen={isWinnerModalOpen} closeModal={()=>setIsWinnerModalOpen(false)} />
-        <InteractionModal interaction={currentInteraction} data={currentCampaign.length !== 0 && currentCampaign[0]} isModalOpen={isInteractionModalOpen} closeModal={()=>setIsInteractionModalOpen(false)} />
+        <EditCampaignModal key={'editCampaignModal'} data={currentCampaign.length !== 0 && currentCampaign[0]} isModalOpen={isEditModalOpen} closeModal={()=>setIsEditModalOpen(false)} />
+        <ParticipantsModal key={'participantsModal'} data={currentCampaign.length !== 0 && currentCampaign[0]} isModalOpen={isParticipantsModalOpen} closeModal={()=>setIsParticipantsModalOpen(false)} />
+        <WinnerModal key={'winnerModal'} data={currentCampaign.length !== 0 && currentCampaign[0]} isModalOpen={isWinnerModalOpen} closeModal={()=>setIsWinnerModalOpen(false)} />
+        <InteractionModal key={'interactionModal'} interaction={currentInteraction} setInteraction={setCurrentInteraction} data={currentCampaign.length !== 0 && currentCampaign[0]} isModalOpen={isInteractionModalOpen} closeModal={()=>setIsInteractionModalOpen(false)} />
     </TemplatePage>
   )
 }

@@ -109,7 +109,7 @@ const NewOrderPopUpInner = () => {
                 </div>
 
                 <div className='flex justify-end'>
-                    <ButtonNoIcon type={'submit'} text={'Create New Order'} textColor={'text-white'} paddingX={'px-2 sm:px-5 lg:px-8'} bgColor={'bg-brandGreen4x'} font={'font-avenirMedium'} fontSize={'text-sm md:text-base'}/>
+                    <ButtonNoIcon type={'submit'} text={'Proceed to Payment'} textColor={'text-white'} paddingX={'px-2 sm:px-5 lg:px-8'} bgColor={'bg-brandGreen4x'} font={'font-avenirMedium'} fontSize={'text-sm md:text-base'}/>
                 </div>
             </div>
 

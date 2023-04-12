@@ -88,7 +88,7 @@ const NavData = (userType) => {
         ],
         user: [
             {
-                pageName: 'Home',
+                pageName: 'Overview',
                 icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6.765 2.13012L2.7225 5.28012C2.0475 5.80512 1.5 6.92262 1.5 7.77012V13.3276C1.5 15.0676 2.9175 16.4926 4.6575 16.4926H13.3425C15.0825 16.4926 16.5 15.0676 16.5 13.3351V7.87512C16.5 6.96762 15.8925 5.80512 15.15 5.28762L10.515 2.04012C9.465 1.30512 7.7775 1.34262 6.765 2.13012Z" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path opacity="0.34" d="M9 13.4924V11.2424" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -146,7 +146,7 @@ const NavData = (userType) => {
         ],
         partner: [
             {
-                pageName: 'Home',
+                pageName: 'Overview',
                 icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6.765 2.13012L2.7225 5.28012C2.0475 5.80512 1.5 6.92262 1.5 7.77012V13.3276C1.5 15.0676 2.9175 16.4926 4.6575 16.4926H13.3425C15.0825 16.4926 16.5 15.0676 16.5 13.3351V7.87512C16.5 6.96762 15.8925 5.80512 15.15 5.28762L10.515 2.04012C9.465 1.30512 7.7775 1.34262 6.765 2.13012Z" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path opacity="0.34" d="M9 13.4924V11.2424" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -176,7 +176,7 @@ const NavData = (userType) => {
                 end:false
             },
             {
-                pageName: 'Inventory',
+                pageName: 'Orders',
                 icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.37406 16.5003H3.05906C2.18906 16.5003 1.47656 15.8028 1.47656 14.9478V3.81776C1.47656 1.85276 2.93906 0.960262 4.73156 1.83776L8.06156 3.47276C8.78156 3.82526 9.37406 4.76276 9.37406 5.55776V16.5003Z" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M16.4775 11.2954V14.1304C16.4775 15.7504 15.7275 16.5004 14.1075 16.5004H9.375V7.81543L9.7275 7.89043L13.1025 8.64793L14.625 8.98543C15.615 9.20293 16.425 9.71293 16.47 11.1529C16.4775 11.1979 16.4775 11.2429 16.4775 11.2954Z" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -185,9 +185,22 @@ const NavData = (userType) => {
                         <path d="M13.1016 8.64764V11.0626C13.1016 11.9926 12.3441 12.7501 11.4141 12.7501C10.4841 12.7501 9.72656 11.9926 9.72656 11.0626V7.89014L13.1016 8.64764Z" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M16.4691 11.1529C16.4241 12.0379 15.6891 12.7504 14.7891 12.7504C13.8591 12.7504 13.1016 11.9929 13.1016 11.0629V8.64795L14.6241 8.98545C15.6141 9.20295 16.4241 9.71295 16.4691 11.1529Z" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>,
-                link:'/inventory',
+                link:'/orders',
                 end:false
             },
+            // {
+            //     pageName: 'Inventory',
+            //     icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            //             <path d="M9.37406 16.5003H3.05906C2.18906 16.5003 1.47656 15.8028 1.47656 14.9478V3.81776C1.47656 1.85276 2.93906 0.960262 4.73156 1.83776L8.06156 3.47276C8.78156 3.82526 9.37406 4.76276 9.37406 5.55776V16.5003Z" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            //             <path d="M16.4775 11.2954V14.1304C16.4775 15.7504 15.7275 16.5004 14.1075 16.5004H9.375V7.81543L9.7275 7.89043L13.1025 8.64793L14.625 8.98543C15.615 9.20293 16.425 9.71293 16.47 11.1529C16.4775 11.1979 16.4775 11.2429 16.4775 11.2954Z" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            //             <path opacity="0.4" d="M4.125 6.75049H6.7275" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            //             <path opacity="0.4" d="M4.125 9.75049H6.7275" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            //             <path d="M13.1016 8.64764V11.0626C13.1016 11.9926 12.3441 12.7501 11.4141 12.7501C10.4841 12.7501 9.72656 11.9926 9.72656 11.0626V7.89014L13.1016 8.64764Z" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            //             <path d="M16.4691 11.1529C16.4241 12.0379 15.6891 12.7504 14.7891 12.7504C13.8591 12.7504 13.1016 11.9929 13.1016 11.0629V8.64795L14.6241 8.98545C15.6141 9.20295 16.4241 9.71295 16.4691 11.1529Z" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            //         </svg>,
+            //     link:'/inventory',
+            //     end:false
+            // },
             {
                 pageName: 'Impact',
                 icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

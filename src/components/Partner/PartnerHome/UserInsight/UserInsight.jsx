@@ -35,7 +35,7 @@ const UserInsight = () => {
       </div>
       
       <div className='overflow-x-auto w-full'>
-      <UserInsightTable rows={rows} />
+        <UserInsightTable rows={rows} />
       </div>
       
       <div className='w-full pt-5 flex justify-center'>

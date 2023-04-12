@@ -12,7 +12,7 @@ const PhoneInput=({disabled,...rest})=>{
         initialCountry: "ng",
         separateDialCode:true,
         nationalMode:false,
-        hadInitialPlaceholder:true,
+        hadInitialPlaceholder:false,
         preferredCountries: ['ng', 'us', 'gb'],
         // utilsScript: process.env.REACT_APP_PHONE_UTIL_SCRIPT,
         geoIpLookup: async function(callback) {

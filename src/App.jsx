@@ -13,6 +13,8 @@ import PartnerHome from './components/Partner/PartnerHome/PartnerHome'
 import Impact from './components/Partner/Impact/Impact'
 import Discussion from './components/Partner/Discussion/Discussion'
 import Profile from './components/Partner/Profile/Profile'
+import Orders from './components/Partner/Orders/Orders'
+import CampaignDetails from './components/Partner/Campaign/CampaignDetails/CampaignDetails'
 
 function App() {
   const campaignState = useCampaignStore(state => state.currentCampaignState)
@@ -42,11 +44,15 @@ function App() {
             {authLevel === 'partner' && 
                 <>
                   <Route index path='/' element={<PartnerHome />} />
-                  <Route index path='/discussion' element={<Discussion />} />
-                  <Route index path='/campaigns' element={<Campaign />} />
-                  <Route index path='/inventory' element={<PartnerInventory />} />
-                  <Route index path='/impact' element={<Impact />} />
-                  <Route index path='/profile' element={<Profile />} />
+                  <Route path='/discussion' element={<Discussion />} />
+                  <Route path='/campaigns' >
+                    <Route path='' element={<Campaign />} />
+                    <Route path=':slug' element={<CampaignDetails />} />
+                  </Route>
+                  {/* <Route path='/inventory' element={<PartnerInventory />} /> */}
+                  <Route path='/orders' element={<Orders />} />
+                  <Route path='/impact' element={<Impact />} />
+                  <Route path='/profile' element={<Profile />} />
                 </>
             }
 

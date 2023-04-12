@@ -16,8 +16,8 @@ const Community = () => {
       // Get the scroll offset
       let off = scrollRef.current.scrollTop
 
-      // Check if the scroll offset is greater than 100
-      if (off > 96) {
+      // Check if the scroll offset is greater than 96
+      if (off > 80) {
         setOffset('top-28')
 
       } else{
@@ -36,23 +36,24 @@ const Community = () => {
   }, [scrollRef.current])
 
   
-  
+  const headerBtn = <div>
+                      <button onClick={()=>setOpenModal(true)} className='py-2.5 px-8 rounded-fifty hover:scale-90 active:translate-y-2 trans-all-500-ease-in-out bg-brandGreen4x text-white '>Create New Post</button>
+                      <NewPostModal isModalOpen={openModal} closeModal={()=>setOpenModal(false)} />
+                    </div>
 
   return (
-    <TemplatePage headerTitle={'Discussion'} levelTwoRef={scrollRef} removePaddingBottom={true} >
-              {/* Main content here */}
+    <TemplatePage headerTitle={'Discussion'} levelTwoRef={scrollRef} removePaddingBottom={true}  >
+      {/* Main content here */}
 
-              <Greeting headBtns={false} salutation={' Welcome to Shoppersbag\'s Community'} salutationFontBigger={true} />
+      <Greeting headBtns={headerBtn} useBtns salutation={'Start a Discussion on ShoppersBag'} salutationFontBigger={true} />
 
-              <div className='flex flex-col-reverse xl:grid grid-cols-7 gap-5 rounded-ten'>
-                <DiscussionMain />
-                <DiscussionAside offset={offset} />
-              </div>
+      <div className='flex flex-col-reverse xl:grid grid-cols-7 gap-5 rounded-ten'>
+        <DiscussionMain />
+        <DiscussionAside offset={offset} />
+      </div>
 
-              <div>
-                <button onClick={()=>setOpenModal(true)} className='py-2.5 px-8 rounded-fifty fixed bottom-6 right-6 drop-shadow-1x hover:scale-90 active:translate-y-2 trans-all-500-ease-in-out bg-brandGreen4x text-white '>Create New Post</button>
-                <NewPostModal isModalOpen={openModal} closeModal={()=>setOpenModal(false)} />
-              </div>
+        <button type='button' onClick={()=>setOpenModal(true)} className={`${offset == 'top-28' ? 'visible' : 'invisible'} plus-new-post fixed bottom-6 right-6 text-3xl rounded-fifty bg-brandGreen4x h-10 w-10 text-white drop-shadow-md`}>+</button>
+
     </TemplatePage>
   )
 }

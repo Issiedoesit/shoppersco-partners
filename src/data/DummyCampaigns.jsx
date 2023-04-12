@@ -29,8 +29,26 @@ const DummyCampaigns = [
       ],
       comments:[
         {
-
-        }
+          avatar:"/src/assets/images/avatars/avatar-2.png",
+          name:"Precious Tom",
+          points:"2100",
+          location:"Port Harcourt, Nigeria",
+          comment:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam laoreet massa sapien mattis egestas id sed. Sed euismod pulvinar tellus turpi Diam laoreet massa mattis egestas id sed. Sed euismod pulvinar tellus turpi"
+        },
+        {
+          avatar:"/src/assets/images/avatars/avatar-1.png",
+          name:"Jake Paul",
+          points:"2100",
+          location:"Chicago, USA",
+          comment:"Hello world"
+        },
+        {
+          avatar:"/src/assets/images/avatars/avatar-1.png",
+          name:"Kareen",
+          points:"2100",
+          location:"Stockholm, Sweden",
+          comment:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam laoreet massa sapien mattis egestas id sed. Sed euismod pulvinar tellus turpi."
+        },
       ],
       winners:[
         {
@@ -110,10 +128,63 @@ const DummyCampaigns = [
       ],
       comments:[
         {
-
-        }
+          avatar:"/src/assets/images/avatars/avatar-3.png",
+          name:"Selwyn Paul",
+          points:"2100",
+          location:"Port Harcourt, Nigeria",
+          comment:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam laoreet massa sapien mattis egestas id sed. Sed euismod pulvinar tellus turpi Diam laoreet massa mattis egestas id sed. Sed euismod pulvinar tellus turpi"
+        },
+        {
+          avatar:"/src/assets/images/avatars/avatar-1.png",
+          name:"Jake Paul",
+          points:"2100",
+          location:"Chicago, USA",
+          comment:"Hello world"
+        },
       ],
       winners:[
+        {
+            avatar:"/src/assets/images/avatars/avatar-2.png",
+            name:"Precious Tom",
+            points:"2100",
+            location:"Port Harcourt, Nigeria",
+            claimed:true
+        },
+        {
+            avatar:"/src/assets/images/avatars/avatar-3.png",
+            name:"Selwyn Paul",
+            points:"2000",
+            location:"Lagos, Nigeria",
+            claimed:false
+        },
+        {
+            avatar:"/src/assets/images/avatars/avatar-2.png",
+            name:"Precious Tom",
+            points:"2100",
+            location:"Port Harcourt, Nigeria",
+            claimed:true
+        },
+        {
+            avatar:"/src/assets/images/avatars/avatar-3.png",
+            name:"Selwyn Paul",
+            points:"2000",
+            location:"Lagos, Nigeria",
+            claimed:false
+        },
+        {
+            avatar:"/src/assets/images/avatars/avatar-2.png",
+            name:"Precious Tom",
+            points:"2100",
+            location:"Port Harcourt, Nigeria",
+            claimed:true
+        },
+        {
+            avatar:"/src/assets/images/avatars/avatar-3.png",
+            name:"Selwyn Paul",
+            points:"2000",
+            location:"Lagos, Nigeria",
+            claimed:false
+        },
         {
             avatar:"/src/assets/images/avatars/avatar-2.png",
             name:"Precious Tom",
@@ -190,8 +261,40 @@ const DummyCampaigns = [
       ],
       comments:[
         {
-          
-        }
+          avatar:"/src/assets/images/avatars/avatar-4.png",
+          name:"Isioma Ekwemuka",
+          points:"3600",
+          location:"Kwara, Nigeria",
+          comment:"Thank you so much. So excited for this campaign!!!"
+        },
+        {
+          avatar:"/src/assets/images/avatars/avatar-2.png",
+          name:"Precious Tom",
+          points:"2100",
+          location:"Port Harcourt, Nigeria",
+          comment:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam laoreet massa sapien mattis egestas id sed. Sed euismod pulvinar tellus turpi Diam laoreet massa mattis egestas id sed. Sed euismod pulvinar tellus turpi"
+        },
+        {
+          avatar:"/src/assets/images/avatars/avatar-1.png",
+          name:"Jake Paul",
+          points:"2100",
+          location:"Chicago, USA",
+          comment:"Hello world"
+        },
+        {
+          avatar:"/src/assets/images/avatars/avatar-1.png",
+          name:"Kareen",
+          points:"2100",
+          location:"Stockholm, Sweden",
+          comment:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam laoreet massa sapien mattis egestas id sed. Sed euismod pulvinar tellus turpi."
+        },
+        {
+          avatar:"/src/assets/images/avatars/avatar-3.png",
+          name:"Selwyn Paul",
+          points:"2100",
+          location:"Port Harcourt, Nigeria",
+          comment:"Amazing!"
+        },
       ],
       winners:[
         {
